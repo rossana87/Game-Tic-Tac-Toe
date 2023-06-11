@@ -12,7 +12,11 @@ body {
 }
 
 section {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+section h1 {
+  font-size: 35px;
 }
 
 #board {

@@ -3,6 +3,7 @@ function init() {
   const gameBoard = document.querySelector('#board')
   const infoDisplay = document.querySelector('#message')
 
+
   let gameActive = true
 
   const startCells = ['', '', '', '', '', '', '', '', '']
@@ -45,9 +46,10 @@ function init() {
     const cellIndex = e.target.id
     startCells[cellIndex] = currentPlayer
     currentPlayer = currentPlayer === 'circle' ? 'cross' : 'circle'
-    infoDisplay.innerText = currentPlayerTurn()
-    console.log(e.target)
+    console.log(currentPlayer)
+
     e.target.removeEventListener('click', addItem)
+    infoDisplay.innerText = currentPlayerTurn()
     winningPlayer()
   }
 
@@ -72,6 +74,7 @@ function init() {
 
 
     if (roundWon) {
+      currentPlayer = currentPlayer === 'circle' ? 'cross' : 'circle'
       infoDisplay.innerText = winningMessage()
       gameActive = false
       console.log(roundWon)
@@ -86,10 +89,17 @@ function init() {
     }
   }
 
+  function restartGame() {
+    gameActive = true
+    startCells.fill('')
+    currentPlayer = 'circle'
+    infoDisplay.innerText = currentPlayerTurn()
+    gameBoard.innerHTML = ''
+    createBoard()
+  }
 
 
-
-
+  document.querySelector('.restart-game').addEventListener('click', restartGame)
 
 }
 
