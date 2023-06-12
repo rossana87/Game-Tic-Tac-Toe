@@ -9,6 +9,9 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  font-family: 'Orbit',
+    sans-serif;
+  background-color: black;
 }
 
 section {
@@ -16,7 +19,8 @@ section {
 }
 
 section h1 {
-  font-size: 35px;
+  font-size: 40px;
+  color: #f0b336;
 }
 
 #board {
@@ -26,12 +30,14 @@ section h1 {
   display: flex;
   flex-wrap: wrap;
   border: solid 1px black;
+  cursor: pointer;
+
 }
 
 #message {
   margin-top: 20px;
-  color: black;
-  font-size: 16px;
+  color: #fff;
+  font-size: 20px;
 }
 
 .square {
@@ -49,7 +55,7 @@ section h1 {
   height: 90px;
   width: 90px;
   border-radius: 50%;
-  border: 15px solid green;
+  border: 15px solid #f0b336;
   box-sizing: border-box;
 }
 
@@ -64,7 +70,7 @@ section h1 {
 .cross::after {
   content: '';
   position: absolute;
-  background-color: yellow;
+  background-color: #42c0bb;
 }
 
 .cross:before {
@@ -79,4 +85,15 @@ section h1 {
   height: 30%;
   margin-top: -15%;
   width: 100%;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 10px;
+  font-family: 'Orbit',
+    sans-serif;
+  color: #fff;
+  background-color: #42c0bb;
+  border-radius: 5px;
+
 }
