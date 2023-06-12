@@ -2,6 +2,6 @@
 
 Simple tic-tac-toe game built using HTML, CSS, and JavaScript. 
 
-# Deployment Link
+### Deployment Link
 
-<a href="https://rossana87.github.io/Game-Tic-Tac-Toe/"
+<a href="https://rossana87.github.io/Game-Tic-Tac-Toe/">Tic-Tac_Toe</a>
