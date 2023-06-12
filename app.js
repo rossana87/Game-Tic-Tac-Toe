@@ -46,7 +46,7 @@ function init() {
     const cellIndex = e.target.id
     startCells[cellIndex] = currentPlayer
     currentPlayer = currentPlayer === 'circle' ? 'cross' : 'circle'
-    console.log(currentPlayer)
+    // console.log(currentPlayer)
 
     e.target.removeEventListener('click', addItem)
     infoDisplay.innerText = currentPlayerTurn()
@@ -57,13 +57,11 @@ function init() {
     let roundWon = false
     for (let i = 0; i <= 7; i++) {
       const winningCondition = winningCombos[i]
-      console.log(winningCondition)
+
       const a = startCells[winningCondition[0]]
       const b = startCells[winningCondition[1]]
       const c = startCells[winningCondition[2]]
-      console.log('A', a)
-      console.log('B', b)
-      console.log('C', c)
+
       if (a === '' || b === '' || c === '')
         continue
       if (a === b && b === c) {
@@ -77,7 +75,7 @@ function init() {
       currentPlayer = currentPlayer === 'circle' ? 'cross' : 'circle'
       infoDisplay.innerText = winningMessage()
       gameActive = false
-      console.log(roundWon)
+
       return
     }
 
