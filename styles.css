@@ -11,7 +11,7 @@ body {
   height: 100vh;
   font-family: 'Orbit',
     sans-serif;
-  background-color: black;
+  background-color: #1a2b33;
 }
 
 section {
@@ -26,10 +26,10 @@ section h1 {
 #board {
   height: 300px;
   width: 300px;
-  background-color: black;
+  background-color: #1a2b33;
   display: flex;
   flex-wrap: wrap;
-  border: solid 1px black;
+  border: solid 1px #1a2b33;
   cursor: pointer;
 
 }
@@ -48,7 +48,7 @@ section h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px black;
+  border: solid 1px #1a2b33;
 }
 
 .circle {
